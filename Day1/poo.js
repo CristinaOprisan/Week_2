@@ -156,3 +156,32 @@ let age = persons.showAge()
 let detail = persons.showDetail()
 
 let showHobbies = persons.showHobbies()
+
+
+// Reto7
+
+class Contacts {
+    constructor() {
+      this.persons = [];
+    }
+  
+    addPerson(person) {
+      this.persons.push(person);
+    }
+  
+    printPersons() {
+      this.persons.forEach((person, index) => {   
+        console.log('Person: ');    
+        for (let key in person) {
+          console.log(`${key} - ${person[key]}`);
+        }
+      });
+    }
+  }
+  
+let contacts = new Contacts();
+contacts.addPerson(person1);
+contacts.addPerson(person2);
+contacts.addPerson(person3);
+contacts.printPersons();
+  
